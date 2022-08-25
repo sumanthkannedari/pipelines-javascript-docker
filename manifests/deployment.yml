@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sumanthkannedaripipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sumanthkannedaripipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sumanthkannedaripipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sumanthkannedaripipelinesjavascriptdocker 
+          image: sumanthacrapp.azurecr.io/sumanthkannedaripipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
